@@ -1,6 +1,9 @@
+
+const BACKEND_URL = "https://examenparcial2-tsf0.onrender.com";
+
 const API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
-  ? 'http://localhost:3000'
-  : (location.origin.replace(/\/frontend$/, '')); // ajustar si se sirve estático por separado
+  ? 'http://localhost:3000'   // local dev
+  : BACKEND_URL;              // producción (Static Site)
 
 async function api(path, method='GET', body){
   const opts = { method, headers: { 'Content-Type': 'application/json' } };
