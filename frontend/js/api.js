@@ -1,5 +1,5 @@
 
-const BACKEND_URL = "https://examenparcial2-tsf0.onrender.com";
+
 
 const API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
   ? 'http://localhost:3000'   // local dev
