@@ -13,4 +13,11 @@ app.get('/', (req, res) => res.json({ ok: true, service: 'restaurante-ordenes-ap
 app.use('/clientes', clientesRouter);
 app.use('/ordenes', ordenesRouter);
 
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
 export default app;
